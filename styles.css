@@ -1,0 +1,891 @@
+/* for heading */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* for noraml tetx */
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Rokkitt', serif; */
+
+
+:root {
+    --theme-color: #FF5500;
+    --main-background-color: #000000;
+    --cards-color: #070707;
+
+    --shadow: 3px 3px 10px rgba(12, 12, 12, 0.4);
+
+    --border: 10px;
+
+
+    /* FOnt Size Fow Mobile View */
+
+    --body-font: 12px;
+    --heading-font: 20px;
+    --subheading-font: 16px;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rokkitt', serif;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+p {
+    text-transform: lowercase;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-background-color);
+}
+
+
+
+.main {
+    display: block;
+}
+
+.card {
+    min-width: 350px;
+    min-height: 200px;
+    background-color: var(--cards-color);
+    border-radius: var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-info {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background: url('/images/Repeat.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.layer-red {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(170, 23, 23, .35);
+}
+
+.layer-red img {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: auto;
+}
+
+.price-div {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+
+
+/* Trending IGO */
+.trending-igo-div {
+    box-sizing: border-box;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.igo-details {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: url('images/counterstrike.jpg');
+    background-position: center;
+    background-size: cover; */
+}
+
+.trending-igo {
+    position: absolute;
+    width: 30%;
+    min-height: 100%;
+}
+
+/* sidebar */
+
+.sidebar {
+    width: 70%;
+    min-height: 700px;
+    background-color: rgba(21, 26, 32, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.swiper {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    margin-top: 30px;
+    padding: 25px 0 20px 0;
+
+}
+
+
+.swiper-slide {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    width: 95%;
+    height: 200px;
+    border-radius: 2px solid white;
+
+}
+
+.first-trending-igo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: none;
+
+}
+
+.igo-name-back-div {
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    bottom: 0;
+    background: url('/images/counterstrike.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+
+
+.swiper-slide-active .igo-name-back-div {
+    border: 1.5px solid #ff550000;
+    border-image-slice: 1;
+
+    /* border-image-source: linear-gradient(to right, #FF5500, rgba(128, 43, 0, 0.1)); */
+}
+
+.swiper-slide-active .igo-name-back-div::after {
+    position: absolute;
+    top: -2.5px;
+    bottom: -3px;
+    left: -2.5px;
+    right: -2px;
+    background: linear-gradient(to right, #FF5500, rgba(128, 43, 0, 0.1));
+    content: '';
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.igo-name {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(0.5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.igo-name img {
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    height: 30%;
+    padding-left: 10px;
+}
+
+.igo-art {
+    position: absolute;
+    width: 45%;
+    height: 85%;
+    z-index: 100;
+    right: 10px;
+    bottom: 0;
+}
+
+
+
+/* IGO Details */
+.igo-details img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.igo-trend-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(99, 3, 172, 0.25);
+}
+
+.igo-details-section {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    padding: 10px 30px 10px 10px;
+}
+
+.igo-trending-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.igo-analasis-bottom {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.igo-analysis {
+    width: 100%;
+    height: auto;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 60px 60px;
+    grid-template-areas:
+        "views raisegoal"
+        "likes raisegoal"
+        "tokentype airdrop"
+    ;
+    grid-gap: 1rem;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.igo-analysis h2 {
+    font-weight: 600;
+
+}
+
+.igo-views {
+    grid-area: views;
+
+}
+
+.igo-views p {
+    font-weight: 200;
+}
+
+
+
+.views-icon {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.igo-views img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.igo-likes {
+    grid-area: likes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.igo-likes i {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.igo-likes h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.igo-token-type {
+    grid-area: tokentype;
+
+}
+
+.igo-raise-goal {
+    grid-area: raisegoal;
+
+}
+
+
+/* progress bar */
+
+.chartRaise {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.raiseChart {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.chartdata {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* progress bar end*/
+.igo-airdrop {
+    grid-area: airdrop;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+
+.igo-airdrop h2 {
+    width: 100%;
+}
+.airdrop-icon {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.airdrop-icon i {
+    color: var(--theme-color);
+}
+/* IGO trend Details */
+
+.trend-igo-info {
+    width: 100%;
+    height: auto;
+    min-height: 75%;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+
+}
+
+.trend-igo-info h1 {
+    font-size: 3.5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 6px;
+    text-align: right;
+    line-height: 65px;
+    margin-bottom: 20px;
+}
+
+.trend-igo-info h1:first-child {
+    color: var(--theme-color);
+}
+
+.trend-igo-info p {
+    width: 60%;
+    text-transform: capitalize;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+
+
+.trend-igo-info button {
+    height: 40px;
+    min-width: 22%;
+    border-radius: 3px;
+    background-color: var(--theme-color);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    padding: 5px;
+    border: none;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 768px) {
+
+    p {
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+        font-size: var(--body-font);
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: var(--heading-font);
+    }
+
+    h2 {
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        font-size: var(--subheading-font);
+    }
+
+    .material-icons {
+        font-size: 18px;
+    }
+
+
+    .logo-info {
+        text-align: center;
+        height: 200px;
+        width: 100%;
+    }
+
+    .logo-info p {
+        max-width: 60%;
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .card {
+        min-width: 100px;
+        min-height: 100px;
+
+    }
+
+    .price-div {
+        display: flex;
+    }
+
+
+
+    /* Trending IGO */
+    .trending-igo-div {
+        box-sizing: border-box;
+        width: 100%;
+        height: 70vh;
+        position: relative;
+    }
+
+
+
+    .igo-details {
+        position: absolute;
+        height: 95%;
+        width: 100%;
+
+    }
+
+    .trending-igo {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 30%;
+        /* background-color: rgba(21, 26, 32, 0.6); */
+        /* backdrop-filter: blur(2px); */
+
+    }
+
+    /* sidebar */
+
+    .sidebar {
+        display: none;
+        bottom: 0;
+        position: absolute;
+        width: 0%;
+        min-height: 0%;
+        /* background-color: rgba(0, 115, 255, 0.308); */
+    }
+
+
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 20px 10px 10px 20px;
+        position: absolute;
+        z-index: 5;
+
+    }
+
+
+    .swiper-slide {
+        margin-left: 50px;
+
+        width: 250px;
+        height: 100%;
+
+    }
+
+    .first-trending-igo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .igo-name-back-div {
+        position: absolute;
+        width: 90%;
+        height: 85%;
+        bottom: 0;
+        background: url('/images/counterstrike.jpg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+
+    }
+
+
+    .swiper-slide-active .igo-name-back-div {
+        border: 1.5px solid #ff550000;
+        border-image-slice: 1;
+        /* border-image-source: linear-gradient(to right, #FF5500, rgba(128, 43, 0, 0.1)); */
+    }
+
+    .swiper-slide-active .igo-name-back-div::after {
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(to right, #FF5500, rgba(128, 43, 0, 0.1));
+        content: '';
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .igo-name {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(0.5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .igo-name img {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        height: 50%;
+        padding-left: 10px;
+    }
+
+    .igo-art {
+        position: absolute;
+        width: 45%;
+        height: 85%;
+        z-index: 100;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    /* IGO Details */
+    .igo-details img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .igo-trend-layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(99, 3, 172, 0.25);
+    }
+
+    .igo-details-section {
+        width: 100%;
+        height: 85%;
+        position: absolute;
+        right: 0px;
+        display: flex;
+        padding: 10px 10px 10px 10px;
+        
+    }
+
+    .igo-trending-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        
+    }
+
+    .igo-analasis-bottom {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        
+    }
+
+    .igo-analysis {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+        display: grid;
+        grid-template-columns: 60px 1.2fr;
+        grid-template-rows: 60px 50px 50px;
+        grid-template-areas:
+            "views raisegoal"
+            "likes raisegoal"
+            "tokentype airdrop"
+        ;
+        grid-gap: 0.3rem;
+        
+    }
+
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .igo-views {
+        grid-area: views;
+
+    }
+
+    /* .views-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+
+
+    .igo-likes {
+        grid-area: likes;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .igo-likes i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .igo-likes h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .igo-token-type {
+        grid-area: tokentype;
+
+    }
+
+    .igo-raise-goal {
+        grid-area: raisegoal;
+        text-align: center;
+    }
+
+    .igo-airdrop {
+        grid-area: airdrop;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 5px 0 5px;
+        gap: 5px;
+    }
+    
+    .igo-airdrop h2 {
+        width: 100%;
+        line-height: 15px;
+        letter-spacing: 0;
+    }
+    .airdrop-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+       
+    }
+    .airdrop-icon i {
+        color: var(--theme-color);
+    }
+
+.igo-token-type h2 {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+    /* progress bar */
+
+    .chartRaise {
+        width: 85%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
+    .raiseChart {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+    }
+    
+    .chartdata {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* progress bar end*/
+
+
+
+    .trend-igo-info {
+        width: 100%;
+        height: auto;
+        min-height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .trend-igo-info h1 {
+        font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 2px;
+        text-align: right;
+        line-height: 0px;
+        margin-top: auto;
+    }
+    
+    .trend-igo-info h1:first-child {
+        color: var(--theme-color);
+        margin-bottom: auto;
+        margin-top: 40px;
+    }
+
+    .trend-igo-info h1:nth-child(2) {
+        line-height: 18px;
+        letter-spacing:1px ;
+    }
+    
+    .trend-igo-info p {
+        width: 80%;
+        text-transform: capitalize;
+        text-align:right;
+        line-height: 10px;
+    }
+    
+    .trend-igo-info button {
+        height: 30px;
+        min-width: 20%;
+        border-radius: 3px;
+        background-color: var(--theme-color);
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0px;
+        border: none;
+        padding: 5px;
+        margin-top: auto;
+    }
+}
