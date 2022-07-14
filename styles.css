@@ -69,7 +69,7 @@ body {
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    background: url('images/Repeat.png');
+    background: url('./images/Repeat.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
